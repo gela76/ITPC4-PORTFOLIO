@@ -1,0 +1,643 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, serif;
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 14px 40px;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.nav-title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #555;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+nav ul li a {
+  font-size: 14px;
+  color: #333;
+  font-family: Arial, sans-serif;
+  transition: color 0.2s;
+}
+
+nav ul li a:hover {
+  color: #000;
+}
+
+.nav-socials {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.nav-socials img {
+  width: 20px;
+  height: 20px;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.nav-socials img:hover {
+  opacity: 1;
+}
+
+
+#home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 40px 80px;
+  background-color: #f7f7f7;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hello-badge {
+  display: inline-block;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  background-color: #e8e8e8;
+  color: #555;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  letter-spacing: 0.05em;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 28px;
+  color: #111;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: #111;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #333;
+}
+
+.btn-outline {
+  display: inline-block;
+  border: 1px solid #111;
+  color: #111;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-outline:hover {
+  background-color: #111;
+  color: #fff;
+}
+
+.hero-photo img {
+  width: 320px;
+  height: 360px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+
+#about-card {
+  background-color: #efefef;
+  padding: 80px 40px;
+}
+
+.about-card-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-family: Arial, sans-serif;
+  background-color: #e0e0e0;
+  color: #666;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+  letter-spacing: 0.1em;
+}
+
+.resume-grid {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 0;
+}
+
+
+.resume-bio {
+  padding: 20px 24px 20px 0;
+  border-right: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.resume-bio h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.resume-bio p {
+  font-size: 12px;
+  color: #555;
+  line-height: 1.75;
+  font-family: Arial, sans-serif;
+}
+
+
+.resume-details {
+  padding: 20px 0 20px 24px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.resume-details p {
+  font-size: 12px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.resume-details strong {
+  color: #111;
+}
+
+
+.resume-education {
+  padding: 20px 24px 20px 0;
+  border-right: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.resume-education h4,
+.resume-language h4,
+.resume-skills h4,
+.resume-hobbies h4 {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.resume-education p {
+  font-size: 12px;
+  color: #555;
+  line-height: 1.7;
+  font-family: Arial, sans-serif;
+}
+
+
+.resume-language {
+  padding: 20px 0 20px 24px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.lang-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.lang-name {
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  width: 80px;
+  color: #333;
+}
+
+.lang-bar {
+  flex: 1;
+  height: 10px;
+  background-color: #e5e5e5;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.lang-fill {
+  height: 100%;
+  background-color: #333;
+  border-radius: 10px;
+}
+
+.lang-pct {
+  font-size: 11px;
+  color: #666;
+  font-family: Arial, sans-serif;
+  width: 32px;
+  text-align: right;
+}
+
+
+.resume-skills {
+  padding: 20px 24px 20px 0;
+  border-right: 1px solid #e5e5e5;
+}
+
+.tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: 52px;
+}
+
+.tech-item img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  transition: transform 0.2s;
+}
+
+.tech-item img:hover {
+  transform: translateY(-4px);
+}
+
+.tech-item span {
+  font-size: 9px;
+  color: #555;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  line-height: 1.2;
+}
+
+
+.resume-hobbies {
+  padding: 20px 0 20px 24px;
+}
+
+.hobby-icons {
+  display: flex;
+  gap: 14px;
+  font-size: 22px;
+  flex-wrap: wrap;
+}
+
+
+#work {
+  padding: 100px 40px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.work-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#work h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.work-desc {
+  font-size: 13px;
+  color: #888;
+  font-family: Arial, sans-serif;
+  margin-bottom: 48px;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.work-card {
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  background-color: #f0f0f0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.work-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+}
+
+.work-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s;
+}
+
+.work-card:hover img {
+  transform: scale(1.05);
+}
+
+.work-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.3s;
+}
+
+.work-card:hover::after {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.work-label {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: Arial, sans-serif;
+  padding: 12px 16px;
+  text-align: left;
+  background-color: #fff;
+  color: #111;
+}
+
+
+#about {
+  background-color: #efefef;
+  padding: 100px 40px;
+}
+
+.about-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-text-box {
+  background-color: #e8e8e8;
+  border-radius: 12px;
+  padding: 40px;
+  flex: 1;
+}
+
+.about-text-box h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.about-text-box p {
+  font-size: 13px;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 14px;
+  font-family: Arial, sans-serif;
+}
+
+.btn-contact {
+  display: inline-block;
+  margin-top: 10px;
+  border: 2px solid #111;
+  color: #111;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-contact:hover {
+  background-color: #111;
+  color: #fff;
+}
+
+.about-photo img {
+  width: 280px;
+  height: 360px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  flex-shrink: 0;
+}
+
+
+footer {
+  background-color: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 60px 40px 32px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.footer-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-family: Georgia, serif;
+}
+
+.footer-sub {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 36px;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.footer-socials a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: #aaa;
+  text-decoration: none;
+  font-size: 12px;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.footer-socials a:hover {
+  color: #ffffff;
+  transform: translateY(-4px);
+}
+
+.footer-socials img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.footer-socials a:hover img {
+  opacity: 1;
+}
+
+.footer-email {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 32px;
+}
+
+.footer-email a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-email a:hover {
+  color: #ffffff;
+}
+
+.footer-copy {
+  font-size: 11px;
+  color: #555;
+  border-top: 1px solid #222;
+  padding-top: 20px;
+  margin-top: 8px;
+}
+
+
+@media (max-width: 768px) {
+  #home,
+  #about-card,
+  #work,
+  #about {
+    padding: 80px 20px;
+  }
+
+  .hero-inner,
+  .about-inner {
+    flex-direction: column;
+  }
+
+  .hero-text h1 {
+    font-size: 26px;
+  }
+
+  .hero-photo img,
+  .about-photo img {
+    width: 100%;
+    height: auto;
+  }
+
+  .resume-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-bio,
+  .resume-education,
+  .resume-skills {
+    border-right: none;
+    border-bottom: 1px solid #e5e5e5;
+    padding-right: 0;
+  }
+
+  .resume-details,
+  .resume-language,
+  .resume-hobbies {
+    padding-left: 0;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    padding: 14px 20px;
+  }
+
+  .nav-title {
+    display: none;
+  }
+}
